@@ -40,6 +40,7 @@ function App() {
   const [words,setWords]=useState([]);
   const [idx,setIdx]=useState(0);
   const [helpWords,setHelpWords]=useState([]);
+    const [showAnswer,setShowAnswer]=useState(false);
 
   const themes={
     redBlack:{bg:'#0a0101',card:'#1a0303',text:'#fff',accent:'#ff1744',btn:'#d50000'},
