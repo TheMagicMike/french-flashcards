@@ -1,5 +1,4 @@
-import React, { useState, useEffect } from 'react';
-import ReactDOM from 'react-dom/client';
+import React, { useState } from 'react';import ReactDOM from 'react-dom/client';
 import './index.css';
 
 // Vocabulary database - sample data (expandable to 500 per category)
@@ -40,7 +39,6 @@ function App() {
   const [difficulty,setDifficulty]=useState('beginner');
   const [words,setWords]=useState([]);
   const [idx,setIdx]=useState(0);
-  const [showAnswer,setShowAnswer]=useState(false);
   const [helpWords,setHelpWords]=useState([]);
 
   const themes={
@@ -54,11 +52,9 @@ function App() {
     const data=VOCAB_DB[key]||VOCAB_DB.adjectives_beginner;
     const selected=shuffle(data).slice(0,20);
     setWords(selected);
-    setTopic(t);
     setDifficulty(d);
     setIdx(0);
     setShowAnswer(false);
-    setMode('flashcards');
   };
 
   const nextCard=()=>{
