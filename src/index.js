@@ -56,6 +56,7 @@ function App() {
     setDifficulty(d);
     setIdx(0);
     setShowAnswer(false);
+        setMode('flashcards');
   };
 
   const nextCard=()=>{
